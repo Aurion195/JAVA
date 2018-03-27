@@ -1,6 +1,7 @@
 
 public class Directeur
 {
+	private  static Directeur instance = null;
 	private static String statut ;
 	private static String name ;
 	private static double salaire ;
@@ -17,15 +18,14 @@ public class Directeur
 		this.salaire = salaire + (0.4*chiffreAffaireTotal) ;
 	}
 	
-	private static class DirecteurHolder
+	public static Directeur getInstrance(String name, double salaire, int chiffreAffaireTotal) 
 	{
-		private static int chiffreAffaireTotal;
-		private final static Directeur instance = new Directeur(name,salaire,chiffreAffaireTotal) ;
-	}
+		if(instance == null)
+		{
+			instance = new Directeur(name,salaire,chiffreAffaireTotal); // On peut y accéder à la méthode privée
+		}
 
-	public static Directeur getInstance()
-	{
-		return DirecteurHolder.instance ;
+			return instance;
 	}
 	
 	/**Renvoi le statut

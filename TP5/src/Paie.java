@@ -46,7 +46,7 @@ public class Paie
 	
 	public void addDirecteur(String name, double salaire, int chiffreAffaireTotal)
 	{
-		dir = new Directeur(name,salaire,chiffreAffaireTotal) ;
+		dir = dir.getInstrance(name,salaire,chiffreAffaireTotal) ;
 
 		paye[cpt][0] = dir.getStatut() ;
 		paye[cpt][1] = dir.getName() ;
