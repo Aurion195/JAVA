@@ -1,0 +1,33 @@
+//------------------- MATHIEU Thomas ---------------------------//
+//---------------------- L2 - G3 -------------------------------//
+//--------------------- TP3 Java -------------------------------//
+
+Exercice 1 ;
+
+Machines à courants continus
+	- Grands moteur :
+		Universelle
+
+	- Petit moteur :
+		Induction
+		Aimant permanants
+
+Machines à courants alternatifs
+	- Grand moteur :
+		Universels
+
+	- Petits moteur :
+		Induction
+
+
+Exercice 2 ;
+
+Point :
+	Segment :
+		Carré :
+			Cube
+		Triangle :
+		Arc de cercle :
+			Cercle
+			Ovale
+		Polygone
