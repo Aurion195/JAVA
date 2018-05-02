@@ -1,11 +1,5 @@
 
-/** MATHIEU Thomas
- *  L2 - G3 
- *  @author uapv1703778
- *
- */
-public class Vector
-{
+public class Vector {
 		protected int x, y, z ;
 		private static int TMP = 0 ;
 		
@@ -14,8 +8,7 @@ public class Vector
 		 * Constructeur de la classe pour des valeurs
 		 * non définis
 		 */
-		public Vector()
-		{
+		public Vector() {
 			x = y = z = 0 ;
 			TMP++ ;
 		}
@@ -27,8 +20,7 @@ public class Vector
 		 * @param b : valeur choisi
 		 * @param c : valeur choisi
 		 */
-		public Vector(int a, int b, int c)
-		{
+		public Vector(int a, int b, int c) {
 			super();
 			this.x = a;
 			this.y = b;
@@ -40,8 +32,7 @@ public class Vector
 		 * Multiplie avec un scalaire
 		 * @param mul : chiffre
 		 */
-		public void multiply(int mul)
-		{
+		public void multiply(int mul) {
 			x = x*mul ;
 			y = y*mul ;
 			z = z*mul ;
@@ -50,8 +41,7 @@ public class Vector
 		/**
 		 * Affiche un vecteur avec ses valeurs 
 		 */
-		public void display()
-		{
+		public void display() {
 			System.out.println("Le vecteur est composé des valeurs suivantes : [" + x + " , " + y + " , " + z +"]") ;
 		}
 		
@@ -60,8 +50,7 @@ public class Vector
 		 * @param A	: Vecteur créer
 		 * @return : renvoi la somme
 		 */
-		public int multiplyVector(Vector A)
-		{
+		public int multiplyVector(Vector A) {
 			int somme = (A.x * x) + (A.y * y) + (A.z * z) ;
 			return somme ;
 		}
@@ -71,8 +60,7 @@ public class Vector
 		 * @param A : Vecteur créer
 		 * @return : renvoi le vecteur
 		 */
-		public Vector additionVector(Vector A)
-		{
+		public Vector additionVector(Vector A) {
 			Vector c = new Vector(A.x + x, A.y + y, A.z + z) ;
 			TMP ++ ;
 			return c ;
@@ -81,24 +69,21 @@ public class Vector
 		/** Permet de connaitre le nombre de vecteur créer
 		 * @return : renvoi la valeur de vecteur créer
 		 */
-		public static int getTmp()
-		{
+		public static int getTmp() {
 			return TMP ;
 		}
 				
 		/* (non-Javadoc)
 		 * @see java.lang.Object#toString()
 		 */
-		public String toString() 
-		{
+		public String toString() {
 			return "Vector [x=" + x + ", y=" + y + ", z=" + z + "]";
 		}	
 		
 		/** Va intervertir les deux vecteur
 		 * @param A : Vecteur
 		 */
-		public void melange(Vector A)
-		{
+		public void melange(Vector A) {
 			int i = A.x ;
 			int j = A.y ;
 			int k = A.z ;

@@ -1,6 +1,5 @@
 
-public class PairVect 
-{
+public class PairVect {
 	private Vector P, D;
 	
 	/** Va créer un vecteur contenant deux vecteur
@@ -13,8 +12,7 @@ public class PairVect
 	 * @param b
 	 * @param c
 	 */
-	public PairVect(int x,int y,int z,int a, int b,int c)
-	{
+	public PairVect(int x,int y,int z,int a, int b,int c) {
 		this.P= new Vector(x,y,z);
 		this.D= new Vector(a,b,c);
 	}
@@ -24,8 +22,7 @@ public class PairVect
 	 * @param d
 	 * @param c
 	 */
-	public PairVect(Vector d, Vector c)
-	{
+	public PairVect(Vector d, Vector c) {
 		P = new Vector(d.x,d.y,d.z);
 		D = new Vector(c.x,c.y,c.z);
 	}
@@ -34,8 +31,7 @@ public class PairVect
 	 * @return
 	 */
 	
-	public Vector getPremier()
-	{
+	public Vector getPremier() {
 		return P;
 	}
 	
@@ -43,8 +39,7 @@ public class PairVect
 	 * @return
 	 */
 	
-	public Vector getDeuxieme()
-	{
+	public Vector getDeuxieme() {
 		return D;
 	}
 
