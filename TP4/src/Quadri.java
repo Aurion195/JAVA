@@ -1,28 +1,16 @@
 
-public class Quadri implements GeomFig
-{
-	private double a, b, c, d ;
-
+public class Quadri extends Polygon {
 	/**Constructeur de polygone
 	 * @param a = largeur
 	 * @param b = largeur
 	 * @param c = largeur
 	 * @param d = largeur
 	 */
-	public Quadri(double a, double b, double c, double d) 
-	{
-		this.a = a ;
-		this.b = b ;
-		this.c = c ;
-		this.d = d ;
-	}
-	
-	/**Fonction de la class Quadri utilisant une fonction de la classe
-	 * abstraite GeomFig pour calculer un perimetre
-	 * @return
-	 */
-	public double perimetre()
-	{
-		return a+b+c+d ;
+	public Quadri(double x, double y , double z , double w) {
+		super(4);
+		tmp[0]=x;
+		tmp[1]=y;
+		tmp[2]=z;
+		tmp[3]=w;
 	}
 }

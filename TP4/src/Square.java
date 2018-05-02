@@ -1,31 +1,15 @@
 
-public class Square implements GeomFig
-{
+public class Square extends Quadri {
 	private double x ;
-
 	/**Constructeur du carré
 	 * @param x = longueur
 	 */
-	public Square(double x) 
-	{
-		this.x = x ;
+	public Square(int cote) {
+		super(cote,cote,cote,cote);
+		x = cote ;
 	}
 	
-	/**Fonction de la class Square utilisant une fonction de la classe
-	 * abstraite GeomFig pour calculer un perimetre
-	 * @return
-	 */
-	public double perimetre()
-	{
-		return x*x ;
-	}
-	
-	/**Surdéfinition de la la fonction perimetre de la classe Square
-	 * @param y = largeur
-	 * @return
-	 */
-	public double perimetre(int y)
-	{
-		return y*y ;
+	public double perimeter() {
+		return x * x ;
 	}
 }

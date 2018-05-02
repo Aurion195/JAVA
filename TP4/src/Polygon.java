@@ -1,33 +1,39 @@
 
-public class Polygon 
-{
-	private String name ;
+public class Polygon {
 	private int nb ;
+	protected double [] tmp ;
 	
 	/**Consttructeur du polygon
 	 * @param name = nom
 	 * @param nb = nombre de côté
 	 */
-	public Polygon(String n, int nbc)
-	{
-		this.name = n;
-		this.nb = nbc ;
+	public Polygon(int nbc) {
+		if(nbc < 2) {
+			System.out.println("Erreur : le nombre de valeur doit être supérieur à 2");
+			return ;
+		}
+		else {
+			this.nb = nbc ;
+			this.tmp = new double[nbc] ;
+		}
 	}
 
-	/**Renvoi le nom du polygon
+	/**Fonction permettant de calculer le périmètre d'un polygone
 	 * @return
 	 */
-	public String getName() 
-	{
-		return name;
+	public double perimetre() {
+		double peri = 0 ;
+		for(int i = 0; i < this.nb ; i++) {
+			peri += tmp[i];
+		}
+		return peri;
 	}
 
 
 	/**Renvoi le nombre de côté
 	 * @return
 	 */
-	public int getNb() 
-	{
+	public int getNb() {
 		return nb;
 	}
 
